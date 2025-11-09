@@ -1,0 +1,73 @@
+body {
+  font-family: "Times New Roman", Times, serif;
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card__progress {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 8px 6px;
+  font-size: 12px;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+  & span {
+    position: relative;
+  }
+  & .background {
+    position: absolute;
+    width: 0;
+    background-color: #ccc;
+    top: 3px;
+    border-radius: 8px;
+    left: 0;
+    height: 80%;
+  }
+}
+.card__wrapper {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 4px;
+}
+.card__content {
+  border-radius: 8px;
+  background-color: #f6f6f6;
+  width: 350px;
+  aspect-ratio: 1 / 0.8;
+  align-content: center;
+  text-align: center;
+  font-size: 20px;
+  & p {
+    text-transform: capitalize;
+  }
+}
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f6f6f6;
+  margin-top: 8px;
+  padding: 8px;
+  border-radius: 8px;
+  & button {
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: font-size 0.3s;
+  }
+  & button:hover {
+    font-size: 13px;
+  }
+  & button:not(:nth-child(2)) {
+    color: #6b6b6b;
+  }
+  & button.disabled {
+    cursor: no-drop;
+  }
+}
